@@ -17,9 +17,6 @@ namespace Guitar_Tab_Software
 
         private int tuningIndex;
 
-
-
-
         public MainForm()
         {
             InitializeComponent();
@@ -53,12 +50,12 @@ namespace Guitar_Tab_Software
  
         public void changeTunings(List<string> TheTuningList)
         {
-            lblString1.Text = TheTuningList[1];
-            lblString2.Text = TheTuningList[2];
+            lblString1.Text = TheTuningList[5];
+            lblString2.Text = TheTuningList[4];
             lblString3.Text = TheTuningList[3];
-            lblString4.Text = TheTuningList[4];
-            lblString5.Text = TheTuningList[5];
-            lblString6.Text = TheTuningList[6];
+            lblString4.Text = TheTuningList[2];
+            lblString5.Text = TheTuningList[1];
+            lblString6.Text = TheTuningList[0];
 
         }
      

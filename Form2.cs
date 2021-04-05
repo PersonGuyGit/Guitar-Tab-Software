@@ -16,7 +16,7 @@ namespace Guitar_Tab_Software
 
         MainForm MF;
 
-        List<String> stringNames;
+        List<String> stringNames = new List<string>();
 
         public FormSettings(MainForm form)
         {
@@ -25,7 +25,7 @@ namespace Guitar_Tab_Software
             MF = form;
             InitializeComponent();
 
-            string[] names = new string[] { "Standard Tuning", "E FLat Tuning", "Drop D Tuning", "Drop C Tuning", "D Standard Tuning", "Drop C# Tuning" };
+            string[] names = new string[] { "Standard Tuning", "D# Standard Tuning", "Drop D Tuning", "Drop C Tuning", "D Standard Tuning", "Drop C# Tuning" };
 
             cbTunings.Items.AddRange(names);
 
@@ -112,45 +112,57 @@ namespace Guitar_Tab_Software
         private void btnApplySettings_Click(object sender, EventArgs e)
         {
 
+            string selectedTuning = cbTunings.Text;
+
+            {
+                
+
+                switch (selectedTuning)
+                {
+                    case "Standard Tuning":
+                        List<string> StdTuningList = new List<string>() { "E", "A", "D", "G", "B", "E" };
+                        stringNames.AddRange(StdTuningList);
+                        break;
+
+                    case "D# Standard Tuning":
+                        List<string> EbTuningList = new List<string>() { "D#", "G#", "C#", "F#", "A#", "D#" };
+                        stringNames.AddRange(EbTuningList);
+                        break;
+
+                    case "Drop D Tuning":
+                        List<string> DropDTuningList = new List<string>() { "D", "A", "D", "G", "B", "E" };
+                        stringNames.AddRange(DropDTuningList);
+                        break;
+                    case "Drop C Tuning":
+                        List<string> DropCTuningList = new List<string>() { "C", "G", "C", "F", "A", "D" };
+                        stringNames.AddRange(DropCTuningList);
+                        break;
+                    case "D Standard Tuning":
+                        List<string> DStdTuningList = new List<string>() { "D", "G", "C", "F", "A", "D" };
+                        stringNames.AddRange(DStdTuningList);
+                        break;
+                    case "Drop C# Tuning":
+                        List<string> DropCSharpTuningList = new List<string>() { "C#", "G#", "C#", "F#", "A#", "D#" };
+                        stringNames.AddRange(DropCSharpTuningList);
+                        break;
+                }
+
+                MF.changeTunings(stringNames);
+
+                stringNames.Clear();
+            }
+             
+           
+
+            //https://stackoverflow.com/questions/872323/method-call-if-not-null-in-c-sharp
+
             //When Clicked, all of the options will be confirmed and put into the main form
 
 
 
             // Confirm the selected tuning, and assign the string letters to the selections
 
-            string selectedTuning = cbTunings.Text;
-
-            switch (selectedTuning)
-            {
-                case "Standard Tuning":
-                    List<string> StdTuningList = new List<string>() { "E", "A", "D", "G", "B", "E" };
-                    stringNames.AddRange(StdTuningList);
-                    break;
-
-                case "E Flat Tuning":
-                    List<string> EbTuningList = new List<string>() { "Eb", "Ab", "Db", "Gb", "Bb", "Eb" };
-                    stringNames.AddRange(EbTuningList);
-                    break;
-
-                case "Drop D Tuning":
-                    List<string> DropDTuningList = new List<string>() { "D", "A", "D", "G", "B", "E" };
-                    stringNames.AddRange(DropDTuningList);
-                    break;
-                case "Drop C Tuning":
-                    List<string> DropCTuningList = new List<string>() { "C", "G", "C", "F", "A", "D" };
-                    stringNames.AddRange(DropCTuningList);
-                    break;
-                case "D Standard Tuning":
-                    List<string> DStdTuningList = new List<string>() { "D", "G", "C", "F", "A", "D" };
-                    stringNames.AddRange(DStdTuningList);
-                    break;
-                case "Drop C# Tuning":
-                    List<string> DropCSharpTuningList = new List<string>() { "C#", "G#", "C#", "F#", "A#", "D#" };
-                    stringNames.AddRange(DropCSharpTuningList);
-                    break;
-            }
-
-            MF.changeTunings(stringNames);
+        
 
         }
 
@@ -170,6 +182,11 @@ namespace Guitar_Tab_Software
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTuning_Click(object sender, EventArgs e)
         {
 
         }
