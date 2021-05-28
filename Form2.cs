@@ -21,6 +21,9 @@ namespace Guitar_Tab_Software
         public bool bCanMoveOverToForm1
         { get; set; }
 
+        public int charLimit
+        { get; set; }
+
         public bool bStringsChanged
         { get; set; }
 
@@ -32,6 +35,8 @@ namespace Guitar_Tab_Software
             string[] names = new string[] { "Standard Tuning", "D# Standard Tuning", "Drop D Tuning", "Drop C Tuning", "D Standard Tuning", "Drop C# Tuning" };
 
             cbTunings.Items.AddRange(names);
+
+            charLimit = 28;
         }
 
         public class Song
@@ -67,29 +72,37 @@ namespace Guitar_Tab_Software
             {
                 bCanMoveOverToForm1 = true;
             }
+            if (txtSongName.Text != "" && cbTunings.Text.Length <= charLimit)
+            { 
 
-            if (txtSongName.Text != "")
+                if (txtSongName.Text.Length <= charLimit)
+                {
+                    bCanMoveOverToForm1 = true;
+                } else
+                {
+                    MessageBox.Show("Verify that settings are populated, and that all elements are under 29 characters", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            }
+          
+            if (txtTone.Text != "" && cbTunings.Text.Length <= charLimit)
             {
                 bCanMoveOverToForm1 = true;
             }
 
-            if (txtTone.Text != "")
+            if (txtTempo.Text != "" && cbTunings.Text.Length <= charLimit)
             {
                 bCanMoveOverToForm1 = true;
             }
-
-            if (txtTempo.Text != "")
-            {
-                bCanMoveOverToForm1 = true;
-            }
-
-            if (txtTimeSig.Text != "")
+        
+            if (txtTimeSig.Text != "" && cbTunings.Text.Length <= charLimit)
             {
                 bCanMoveOverToForm1 = true;
             }
 
             if (bCanMoveOverToForm1 == true && bStringsChanged == true)
-            {
+            {    
                 NewSong.SongName = txtSongName.Text;
                 NewSong.Tone = txtTone.Text;
                 NewSong.Tempo = txtTempo.Text;

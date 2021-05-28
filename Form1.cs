@@ -58,7 +58,6 @@ namespace Guitar_Tab_Software
             lblString5.Text = TheTuningList[1];
             lblString6.Text = TheTuningList[0];
         }
-     
 
         private void btnOpenAdvancedFormSettings(object sender, EventArgs e)
         {
@@ -91,7 +90,7 @@ namespace Guitar_Tab_Software
                 SaveFileDialog saveDlg = new SaveFileDialog();
 
                 saveDlg.Title = "Save to a file";
-                saveDlg.Filter = "Text Files|*.txt*|All Files|*.*";
+                saveDlg.Filter = "Text Files|*.txt|All Files|*.*";
 
 
                 DialogResult result = saveDlg.ShowDialog();
@@ -141,6 +140,7 @@ namespace Guitar_Tab_Software
             TxtFromString4.Add(textBox3.Text);
             TxtFromString5.Add(textBox2.Text);
             TxtFromString6.Add(textBox1.Text);
+
         }
     }
 }

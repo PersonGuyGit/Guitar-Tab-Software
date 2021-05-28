@@ -1,0 +1,11 @@
+C:\Users\Big Smoke\source\repos\Guitar Tab Software\bin\Release\Guitar Tab Software.exe.config
+C:\Users\Big Smoke\source\repos\Guitar Tab Software\bin\Release\Guitar Tab Software.exe
+C:\Users\Big Smoke\source\repos\Guitar Tab Software\bin\Release\Guitar Tab Software.pdb
+C:\Users\Big Smoke\source\repos\Guitar Tab Software\obj\Release\Guitar Tab Software.csprojAssemblyReference.cache
+C:\Users\Big Smoke\source\repos\Guitar Tab Software\obj\Release\Guitar_Tab_Software.MainForm.resources
+C:\Users\Big Smoke\source\repos\Guitar Tab Software\obj\Release\Guitar_Tab_Software.FormSettings.resources
+C:\Users\Big Smoke\source\repos\Guitar Tab Software\obj\Release\Guitar_Tab_Software.Properties.Resources.resources
+C:\Users\Big Smoke\source\repos\Guitar Tab Software\obj\Release\Guitar Tab Software.csproj.GenerateResource.cache
+C:\Users\Big Smoke\source\repos\Guitar Tab Software\obj\Release\Guitar Tab Software.csproj.CoreCompileInputs.cache
+C:\Users\Big Smoke\source\repos\Guitar Tab Software\obj\Release\Guitar Tab Software.exe
+C:\Users\Big Smoke\source\repos\Guitar Tab Software\obj\Release\Guitar Tab Software.pdb
